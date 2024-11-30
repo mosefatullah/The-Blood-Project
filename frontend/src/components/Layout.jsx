@@ -7,9 +7,9 @@ import Button from "./Button";
 
 export default function Layout(props) {
  const [open, setOpen] = useState(false);
- const [name, setName] = useState(null);
- const [bank_name, setbank_name] = useState(null);
- const [email, setEmail] = useState(null);
+ const [name, setName] = useState(localStorage.getItem("user-name"));
+ const [bank_name, setbank_name] = useState(localStorage.getItem("user-bank_name"));
+ const [email, setEmail] = useState(localStorage.getItem("user-email"));
  let navigate = useNavigate();
 
  useEffect(() => {
